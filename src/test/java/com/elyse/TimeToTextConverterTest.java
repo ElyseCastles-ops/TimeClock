@@ -83,5 +83,11 @@ public class TimeToTextConverterTest {
         assertEquals("quarter to one PM", timeAsText);
     }
 
+    @Test
+    public void canDoQuarterToMidnight() {
+        String timeAsText = tttConverter.convertTimeToText(LocalTime.of(23, 45));
+        assertEquals("quarter to midnight", timeAsText);
+    }
+
 
 }

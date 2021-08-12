@@ -11,8 +11,8 @@ public class TimeToTextConverter {
     public TimeToTextConverter() {
         String[] stringHours = {"twelve AM", "one AM", "two AM", "three AM", "four AM", "five AM", "six AM", "seven AM", "eight AM",
         "nine AM", "ten AM", "eleven AM" , "twelve PM", "one PM", "two PM", "three PM", "four PM", "five PM", "six PM", "seven PM",
-        "eight PM", "nine PM", "ten PM", "eleven PM"};
-        for (int i = 0; i < 24; i++) {
+        "eight PM", "nine PM", "ten PM", "eleven PM", "twelve AM"};
+        for (int i = 0; i <= 24; i++) {
             hours.put(i, stringHours[i]);
         }
 
@@ -30,7 +30,7 @@ public class TimeToTextConverter {
 
 
     public String noonOrMidnight(Integer hour) {
-        if (hour == 0) {
+        if (hour == 0 || hour == 24) {
             return "midnight";
         }
         else if (hour == 12) {
